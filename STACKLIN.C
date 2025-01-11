@@ -24,6 +24,11 @@ void push(struct Node** top,int data)
 
 int pop(struct Node** top)
 {
+   if(*top==NULL)
+    {
+      printf("stack underflow\n");
+      return -1;
+    }
    struct Node*temp=*top;
    int poppedData=temp->data;
    if(*top==NULL)
