@@ -59,18 +59,6 @@ void input()
       scanf("%d",&ele);
       b[ele]=1;
    }
-   printf("\n Set 1:{");
-   for(i=1;i<=9;i++)
-   {
-      printf("%d",a[i]);
-   }
-   printf("}");
-   printf("\n Set 2:{");
-   for(i=1;i<=9;i++)
-   {
-      printf("%d" ,b[i]);
-   }
-   printf("}");
 }
 
 void output(int c[])
