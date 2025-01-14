@@ -59,42 +59,6 @@ struct Node* findMin(struct Node* root)
 	 return root;
     }
 
-struct Node* deleteNode(struct Node* root,int data)
-{
-   struct Node* temp=findMin(root->right);
-   if(root==NULL)
-   {
-     return root;
-   }
-   if(data<root->data)
-   {
-     root->left=deleteNode(root->left,data);
-   }
-   else if(data>root->data)
-   {
-    root->right=deleteNode(root->right,data);
-   }
-    else
-    {
-    if(root->left==NULL)
-    {
-       struct Node* temp=root->right;
-       free(root);
-       return temp;
-    }
-    else if(root->right==NULL)
-    {
-       struct Node* temp=root->left;
-       free(root);
-       return temp;
-    }
-      root->data=temp->data;
-      root->right=deleteNode(root->right,temp->data);
-    }
-    return root;
-
- }
-
 void displayTree(struct Node* root,int space)
 {
    int i;
